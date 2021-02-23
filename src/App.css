@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600;800&family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+  background-position: top;
+  background-size: 1000px;
+  background-image: url('https://image.freepik.com/vetores-gratis/elementos-alimentares-desenhados-a-mao_1411-48.jpg');
+}
+
+:root {
+  --red: #D60000;
+  --white: #FFFFFF;
+}
+
+.form {
+  align-items: center;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  flex-direction: column;
+  left: 17px;
+  margin: 5px;
+  min-height: 140px;
+  min-width: 240px;
+  padding: 20px;
+  display: flex;
+}
+
+.form-button {
+  background: var(--red);
+  border-radius: 50px;
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  height: 50px;
+  line-height: 37px;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+
+.form-page {
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-title {
+  color: var(--red);
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 36px;
+  font-style: bold;
+  font-weight: bold;
+  height: 55px;
+  line-height: 55px;
+  margin: 0;
+  top: 287px;
+}
+
+.form-subtitle {
+color: #696976;
+font-family: 'Noto Sans', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+height: 25px;
+left: 104px;
+line-height: 25px;
+margin: 0;
+top: 329px;
+}
+
+.form-info {
+  color: #696976;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  height: 50px;
+  left: 52px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin: 0;
+  text-align: center;
+  top: 370px;
+  width: 269px;
+}
+
+.form-input {
+  background: rgba(204, 204, 204, 0.69);
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+  left: 80px;
+  margin: 5px;
+  top: 436px;
+  width: 212px;
+}
+
+.img-login {
+  border-radius: 50%;
+  filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+  height: 250px;
+  margin-bottom: 5px;
+}
+
+.meals {
+  align-items: center;
+  background: #0fa36b;
+  color: #464646;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.rocksGlass {
+  animation: shake 1s infinite ease;
+  max-height: 80vh;
+}
+
+.item-card p {
+margin: 2px;
+}
+
+.done-item-card {
+  align-items: center;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.41);
+  box-sizing: border-box;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  width: 170px;
+  display: flex;
+}
+
+.item-card {
+  align-items: center;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.41);
+  box-sizing: border-box;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  width: 47%;
+  display: flex;
+}
+
+.done-item-card h3 {
+  color:#494949;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  margin:0;
+}
+
+.done-item-card p {
+  margin: 2px;
+}
+
+.done-item-card img {
+  width: 100%;
+}
+
+.done-item-card a {
+  text-decoration: none;
+}
+
+.item-card h3 {
+  color:#494949;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  margin:0;
+}
+
+.item-card a {
+  text-decoration: none;
+}
+
+.item-card img {
+  width: 170px;
+}
+
+.icon-button img {
+  width: 40px;
+}
+
+.favoritePage {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.makeFlex {
+  display:flex;
+}
+
+.favorite-card-list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+  padding: 5px;
+}
+
+ .favorite-item-card a {
+  text-decoration: none;
+}
+ 
+.card-list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+  padding: 5px;  
+}
+
+.details-img-main {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  margin:10px auto;
+  width: 307px;
+}
+
+.detalhes-main {
+  background: rgba(255, 252, 252, 0.85);
+  border-radius: 8px;
+  margin: 10px auto;
+  width: 341px; 
+}
+
+.detalhes-title {
+  color: #3C3C3C;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  margin:0 10px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.detalhes-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0  8px;
+}
+
+.details h5 {
+  color: #3C3C3C;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  margin: 0;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.details p {
+  color: #3C3C3C;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  margin: 5px 10px;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.details li {
+  color: #3C3C3C;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.horizontal-name {
+  align-items: flex-end;
+  font-family: 'Baloo Thambi 2', cursive;
+  color: #3C3C3C;
+  display: flex;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 55px;
+  margin:0 10px;
+  text-decoration: none;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.meals > .logo {
+  animation: shake 1.5s infinite ease;
+  color: aliceblue;
+  font-family: Montserrat , sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+@keyframes shake {
+
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes clink {
+
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.footer {
+  align-items: center;
+  background: var(--red);
+  box-shadow: -2px -2px 4px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 10vh;
+  justify-content: space-around;
+  position: fixed;
+  top: 580px;
+  width: 100vw;
+}
+
+.main-header {
+  background: var(--red);
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 76px;
+  justify-content: space-around;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+}
+
+.item-ingredients {
+  align-items: center;
+  background: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.41);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  justify-content: center;
+  margin: 5px;
+  width: 165px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;  
+  margin-bottom: 60px;
+  margin-top: 80px;
+  padding: 5px;
+}
+
+.header-button {
+  background: var(--red);
+  border: none;
+  margin-right: 5px;
+}
+
+.sideScroll {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 230px;
+  justify-content: flex-start;
+  margin: 0;
+  overflow: auto;
+  overflow-x: scroll;
+  width: 100vw;
+}
+
+.details {
+  display: flex;
+  flex-flow: column;
+}
+
+.page-title {
+  color: var(--white);
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 58px;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 90px;  
+}
+
+.navbar-button {
+  background: #000000;
+  border-radius: 2px;
+  border: 1px solid var(--white);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  margin:0 2px 6px 2px;
+  padding: 3px 7px;
+}
+
+.favorites {
+  background: #000000;
+  border-radius: 2px;
+  border: 1px solid var(--white);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  margin:0 2px 6px 2px;
+  padding: 3px 7px;
+}
+
+.search-input {
+  background: var(--white);
+  border-radius: 8px;
+  border: none;
+  height: 30px;
+  left: 80px;
+  margin: 5px;
+  margin: auto;
+  top: 436px;
+  width: 335px;
+}
+
+.search-radio {
+  color: var(--white);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.button-tag {
+  background: var(--white);
+  border-radius: 25px;
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  color: black;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  margin:0 8px;
+  padding: 3px 7px;
+}
+
+.icon-button {
+  background: rgba(255, 252, 252, 0.85);
+  border: none;
+  margin-right: 10px;
+}
+
+.profile {
+  align-items: center;
+  background: rgba(255, 252, 252, 0.85);
+  border-radius: 8px;
+  flex-direction: column;
+  margin: 200px auto;
+  width: 341px;
+  display: flex;
+}
+
+.profile p {
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.profile a {
+  height: 35px;
+  text-align: center;
+  text-decoration: none; 
+}
+
+.profile button {
+  background: #2c29af;
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  height: 80px;
+  margin: 30px;
+  width: 80px;
+}
+
+.alert { 
+  color: #3C3C3C;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  margin: 0;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
