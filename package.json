@@ -24,11 +24,11 @@
   "scripts": {
     "cy": "cypress run",
     "cy:open": "cypress open",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "node node_modules/react-scripts/scripts/start.js",
+    "build": "node node_modules/react-scripts/scripts/build.js",
+    "test": "node node_modules/react-scripts/scripts/test.js",
     "test-coverage": "react-scripts test --coverage --watchAll=false",
-    "eject": "react-scripts eject",
+    "eject": "node node_modules/react-scripts/scripts/eject.js",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx"
   },
   "eslintConfig": {
