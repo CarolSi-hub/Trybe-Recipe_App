@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import Header from '../components/Header';
@@ -11,6 +13,7 @@ import { fetchGlobalMeal,
   fetchMealByIngredients,
   fetchMealByName,
   fetchMealByFirstLetter } from '../services/API';
+
 
 function Comidas() {
   const history = useHistory();
@@ -82,7 +85,7 @@ function Comidas() {
 
   useEffect(() => {
     getEndPointAndFetch();
-  }, [typeOfFetch]);
+  }, [typeOfFetch]); 
   useEffect(() => {
     function getWhatToRender() {
       if (location.state !== undefined) {
