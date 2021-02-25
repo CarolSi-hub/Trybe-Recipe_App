@@ -8,7 +8,7 @@ function ComidasDetalhes() {
   const getIdFromUrl = () => {
     let id = window.location.href;
     id = id.split('/').pop();
-    setItemId(id);
+    setItemId(Number(id));
   };
 
   useEffect(() => {

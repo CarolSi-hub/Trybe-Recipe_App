@@ -52,7 +52,7 @@ CardList.propTypes = {
   arrayOfCard: PropTypes.arrayOf(PropTypes.objectOf).isRequired,
   typeOfCard: PropTypes.string.isRequired,
   sideScroll: PropTypes.string.isRequired,
-  recommendation: PropTypes.string.isRequired,
+  recommendation: PropTypes.string,
 };
 
 export default CardList;

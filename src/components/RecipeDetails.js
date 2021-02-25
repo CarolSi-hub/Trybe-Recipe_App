@@ -139,7 +139,6 @@ function RecipeDetails({ itemId, mealType }) {
         width="100%"
         data-testid="recipe-photo"
         src={ details[`str${mealType}Thumb`] }
-        tagName="img"
       />
       <h3
         className="detalhes-title"
@@ -214,7 +213,7 @@ function RecipeDetails({ itemId, mealType }) {
 }
 
 RecipeDetails.propTypes = {
-  itemId: PropTypes.string.isRequired,
+  itemId: PropTypes.number.isRequired,
   mealType: PropTypes.string.isRequired,
 };
 

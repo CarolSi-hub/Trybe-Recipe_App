@@ -18,11 +18,8 @@ export const getIngredients = (details) => {
 };
 
 export const enableButton = (setDisableButton, stateList, mealType, itemId) => {
-  console.log('chamou');
-  console.log(stateList.length, 'statelist');
   const list = JSON.parse(localStorage.getItem('inProgressRecipes'));
   const checkedIngredients = list[mealType][itemId];
-  console.log(checkedIngredients.length, 'checkedingred');
   if (stateList.length === checkedIngredients.length) setDisableButton(false);
 };
 
@@ -70,7 +67,6 @@ export const addToFavorites = (itemId, mealType, details, setIsFavorite) => {
   };
   let favList = JSON.parse(localStorage.getItem('favoriteRecipes'));
   if (favList) {
-    console.log('entrou');
     if (favList.filter((item) => item.id === itemId).length > zero) {
       favList = favList.filter((item) => item.id !== itemId);
       localStorage.setItem('favoriteRecipes', JSON.stringify(favList));

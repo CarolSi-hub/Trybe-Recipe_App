@@ -100,9 +100,9 @@ function Header({ title,
 Header.propTypes = {
   title: PropTypes.string.isRequired,
   hideSearchIcon: PropTypes.string.isRequired,
-  setFetch: PropTypes.func.isRequired,
-  setValueToFetch: PropTypes.func.isRequired,
-  getEndPointAndFetch: PropTypes.func.isRequired,
+  setFetch: PropTypes.func,
+  setValueToFetch: PropTypes.func,
+  getEndPointAndFetch: PropTypes.func,
 };
 
 export default Header;
