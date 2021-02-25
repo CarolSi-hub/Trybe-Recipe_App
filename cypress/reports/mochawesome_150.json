@@ -1,0 +1,396 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T23:06:29.197Z",
+    "end": "2021-02-04T23:06:35.554Z",
+    "duration": 6357,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c397255-c67d-431c-a997-d09a6e81e8ff",
+      "title": "",
+      "fullFile": "cypress/integration/done_recipes_spec.js",
+      "file": "cypress/integration/done_recipes_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "725d1394-20ae-440c-be6b-efbc96f8d068",
+          "title": "Done recipes screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8cd5ecbd-51dd-49ad-a1de-156d697e5000",
+              "title": "54 - Implemente os elementos da tela de receitas feitas respeitando os atributos descritos no protótipo",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Todos os data-testids estão disponíveis",
+                  "fullTitle": "Done recipes screen 54 - Implemente os elementos da tela de receitas feitas respeitando os atributos descritos no protótipo Todos os data-testids estão disponíveis",
+                  "timedOut": null,
+                  "duration": 2100,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-all-btn\"]');\ncy.get('[data-testid=\"filter-by-food-btn\"]');\ncy.get('[data-testid=\"filter-by-drink-btn\"]');\ncy.get('[data-testid=\"0-horizontal-image\"]');\ncy.get('[data-testid=\"0-horizontal-top-text\"]');\ncy.get('[data-testid=\"0-horizontal-name\"]');\ncy.get('[data-testid=\"0-horizontal-done-date\"]');\ncy.get('[data-testid=\"0-horizontal-share-btn\"]');\ncy.get('[data-testid=\"0-Pasta-horizontal-tag\"]');\ncy.get('[data-testid=\"0-Curry-horizontal-tag\"]');\ncy.get('[data-testid=\"1-horizontal-image\"]');\ncy.get('[data-testid=\"1-horizontal-top-text\"]');\ncy.get('[data-testid=\"1-horizontal-name\"]');\ncy.get('[data-testid=\"1-horizontal-share-btn\"]');\ncy.get('[data-testid=\"1-horizontal-done-date\"]');",
+                  "err": {},
+                  "uuid": "1664b40b-dffb-4a54-9dc3-9de30993235d",
+                  "parentUUID": "8cd5ecbd-51dd-49ad-a1de-156d697e5000",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "1664b40b-dffb-4a54-9dc3-9de30993235d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2100,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "db92a52f-0a72-48b8-a6eb-a3be64688473",
+              "title": "55 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma comida",
+                  "fullTitle": "Done recipes screen 55 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, a data em que a pessoa fez a receita, as 2 primeiras tags retornadas pela API e um botão de compartilhar O card possui os atributos corretos de uma comida",
+                  "timedOut": null,
+                  "duration": 212,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').should('have.attr', 'src').should('include', doneRecipes[0].image);\ncy.get('[data-testid=\"0-horizontal-top-text\"]').contains(\"\".concat(doneRecipes[0].area, \" - \").concat(doneRecipes[0].category));\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"0-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-done-date\"]').contains('23/06/2020');\ncy.get('[data-testid=\"0-Pasta-horizontal-tag\"]').contains(doneRecipes[0].tags[0]);\ncy.get('[data-testid=\"0-Curry-horizontal-tag\"]').contains(doneRecipes[0].tags[1]);",
+                  "err": {},
+                  "uuid": "65053369-4baf-440d-8554-cc7ff85f991f",
+                  "parentUUID": "db92a52f-0a72-48b8-a6eb-a3be64688473",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "65053369-4baf-440d-8554-cc7ff85f991f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 212,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "96d49782-7078-4740-8309-f195f40f854b",
+              "title": "56 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma bebida",
+                  "fullTitle": "Done recipes screen 56 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica, a data em que a pessoa fez a receita e um botão de compartilhar O card possui os atributos corretos de uma bebida",
+                  "timedOut": null,
+                  "duration": 280,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-image\"]').should('have.attr', 'src').should('include', doneRecipes[1].image);\ncy.get('[data-testid=\"1-horizontal-top-text\"]').contains(doneRecipes[1].alcoholicOrNot);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(doneRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-done-date\"]').contains('23/06/2020');",
+                  "err": {},
+                  "uuid": "e60ec060-2cd6-45ff-a4aa-27729b6ec964",
+                  "parentUUID": "96d49782-7078-4740-8309-f195f40f854b",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e60ec060-2cd6-45ff-a4aa-27729b6ec964"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 280,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "6b55b4b2-7a1d-4195-8f46-24fe85084e51",
+              "title": "57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "fullTitle": "Done recipes screen 57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "timedOut": null,
+                  "duration": 444,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.contains('Link copiado!');",
+                  "err": {},
+                  "uuid": "919b5f32-6b28-492e-8166-537438524523",
+                  "parentUUID": "6b55b4b2-7a1d-4195-8f46-24fe85084e51",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "fullTitle": "Done recipes screen 57 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "timedOut": null,
+                  "duration": 242,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+                  "err": {},
+                  "uuid": "af2da8cb-0738-4622-81d3-0b8b527b5fac",
+                  "parentUUID": "6b55b4b2-7a1d-4195-8f46-24fe85084e51",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "919b5f32-6b28-492e-8166-537438524523",
+                "af2da8cb-0738-4622-81d3-0b8b527b5fac"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 686,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "dc84410d-6a7a-4361-9d33-e10e00022590",
+              "title": "58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "timedOut": null,
+                  "duration": 236,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "2e99da58-4780-455f-87cf-b4d3fc6404c0",
+                  "parentUUID": "dc84410d-6a7a-4361-9d33-e10e00022590",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "timedOut": null,
+                  "duration": 242,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-drink-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "48097ada-330f-4ec4-9573-3c66d0c68c5a",
+                  "parentUUID": "dc84410d-6a7a-4361-9d33-e10e00022590",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "fullTitle": "Done recipes screen 58 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "timedOut": null,
+                  "duration": 334,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"filter-by-all-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(doneRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(doneRecipes[1].name);",
+                  "err": {},
+                  "uuid": "459673c2-9b80-4996-8470-84878cce69d9",
+                  "parentUUID": "dc84410d-6a7a-4361-9d33-e10e00022590",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2e99da58-4780-455f-87cf-b4d3fc6404c0",
+                "48097ada-330f-4ec4-9573-3c66d0c68c5a",
+                "459673c2-9b80-4996-8470-84878cce69d9"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 812,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "63ea4715-5487-48d9-904d-f596aa03ce04",
+              "title": "59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Done recipes screen 59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 361,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+                  "err": {},
+                  "uuid": "aa156ad2-8fa1-48d1-bb90-1a9ad88c672d",
+                  "parentUUID": "63ea4715-5487-48d9-904d-f596aa03ce04",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Done recipes screen 59 - Redirecione para a tela de detalhes da receita caso seja clicado na foto ou no nome da receita Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 244,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-name\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+                  "err": {},
+                  "uuid": "376a281f-3386-483e-818c-d4637c5a9e8d",
+                  "parentUUID": "63ea4715-5487-48d9-904d-f596aa03ce04",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "aa156ad2-8fa1-48d1-bb90-1a9ad88c672d",
+                "376a281f-3386-483e-818c-d4637c5a9e8d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 605,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

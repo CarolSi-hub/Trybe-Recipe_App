@@ -1,0 +1,280 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T22:49:56.453Z",
+    "end": "2021-02-04T22:50:07.523Z",
+    "duration": 11070,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d85b784f-6b18-40ac-b90f-26ad00702168",
+      "title": "",
+      "fullFile": "cypress/integration/explore_by_area_spec.js",
+      "file": "cypress/integration/explore_by_area_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee70dd51-f6ff-4734-a375-1bffd2b93574",
+          "title": "78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A tela tem os data-testids de todos os 12 cards e de todos os locais de origem",
+              "fullTitle": "78 - Implemente os elementos da tela de explorar por local de origem respeitando os atributos descritos no protótipo A tela tem os data-testids de todos os 12 cards e de todos os locais de origem",
+              "timedOut": null,
+              "duration": 4276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"All-category-filter\"]').should('not.exist');\nmealCategoriesMock.meals.forEach(function (_ref) {\n  var category = _ref.strCategory;\n  cy.get(\"[data-testid=\\\"\".concat(category, \"-category-filter\\\"]\")).should('not.exist');\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]');\nareasMock.meals.forEach(function (_ref2) {\n  var area = _ref2.strArea;\n  cy.get(\"[data-testid=\\\"\".concat(area, \"-option\\\"]\"));\n});\nfor (var index = 0; index < 12; index += 1) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-recipe-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\"));\n}\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "ab51e95d-9415-4147-8568-7ca506f26745",
+              "parentUUID": "ee70dd51-f6ff-4734-a375-1bffd2b93574",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab51e95d-9415-4147-8568-7ca506f26745"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4276,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "43a3e4fc-91fb-4933-a2b4-9b0cd9038f19",
+          "title": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devem ser carregadas as 12 primeiras receitas de comidas",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Devem ser carregadas as 12 primeiras receitas de comidas",
+              "timedOut": null,
+              "duration": 553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncheckFirstMeals(mealsMock.meals);",
+              "err": {},
+              "uuid": "1cd3fe68-83ce-4a50-b77d-aa197c883a0c",
+              "parentUUID": "43a3e4fc-91fb-4933-a2b4-9b0cd9038f19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Ao selecionar um filtro de local de origem, todas as receitas devem mudar para os dados filtrados da API",
+              "timedOut": null,
+              "duration": 1220,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Japanese');\ncheckFirstMeals(japaneseMealsMock.meals, 5);\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Italian');\ncheckFirstMeals(italianMealsMock.meals);",
+              "err": {},
+              "uuid": "26e8d49f-948b-4ca3-96e3-e5124add8562",
+              "parentUUID": "43a3e4fc-91fb-4933-a2b4-9b0cd9038f19",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL",
+              "fullTitle": "79 - Desenvolva as mesmas especificações da tela de receitas principal, com a diferença de que os filtros de categoria são substituídos por um dropdown Ao clicar no card, a rota deve mudar para a tela de detalhes da receita com o ID da mesma na URL",
+              "timedOut": null,
+              "duration": 637,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-recipe-card\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52977');\n});",
+              "err": {},
+              "uuid": "c9efe597-dd7a-46c7-a54b-a31b6d5a08f8",
+              "parentUUID": "43a3e4fc-91fb-4933-a2b4-9b0cd9038f19",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1cd3fe68-83ce-4a50-b77d-aa197c883a0c",
+            "26e8d49f-948b-4ca3-96e3-e5124add8562",
+            "c9efe597-dd7a-46c7-a54b-a31b6d5a08f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2410,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bf91a57b-6cd6-43e8-9636-2b91abe1ee87",
+          "title": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\"",
+              "fullTitle": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro No dropdown devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\"",
+              "timedOut": null,
+              "duration": 574,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"All-option\"]').contains('All');\nareasMock.meals.forEach(function (_ref3) {\n  var area = _ref3.strArea;\n  cy.get(\"[data-testid=\\\"\".concat(area, \"-option\\\"]\")).contains(area);\n});",
+              "err": {},
+              "uuid": "5c29daa1-4c9c-4144-a423-e6d11347c6d7",
+              "parentUUID": "bf91a57b-6cd6-43e8-9636-2b91abe1ee87",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "A opção \"All\" retorna as receitas sem nenhum filtro",
+              "fullTitle": "80 - Implemente o dropdown de maneira que devem estar disponíveis todas as áreas retornadas da API, incluindo a opção \"All\", que retorna as receitas sem nenhum filtro A opção \"All\" retorna as receitas sem nenhum filtro",
+              "timedOut": null,
+              "duration": 1059,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/area', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('Japanese');\ncheckFirstMeals(japaneseMealsMock.meals, 5);\ncy.get('[data-testid=\"explore-by-area-dropdown\"]').select('All');\ncheckFirstMeals(mealsMock.meals);",
+              "err": {},
+              "uuid": "e3b63c01-79b0-4110-9e8e-5bdc17e994b2",
+              "parentUUID": "bf91a57b-6cd6-43e8-9636-2b91abe1ee87",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c29daa1-4c9c-4144-a423-e6d11347c6d7",
+            "e3b63c01-79b0-4110-9e8e-5bdc17e994b2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1633,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "aa23b33b-4089-416e-a766-73b542111676",
+          "title": "81 - Implemente a rota que deve ser apenas `/explorar/comidas/area`",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao acessar a rota ela retorna um erro de \"Not Found\"",
+              "fullTitle": "81 - Implemente a rota que deve ser apenas `/explorar/comidas/area` Ao acessar a rota ela retorna um erro de \"Not Found\"",
+              "timedOut": null,
+              "duration": 167,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas/area');\ncy.contains('Not Found');",
+              "err": {},
+              "uuid": "282a49fd-4884-417c-85aa-9003b98a8e50",
+              "parentUUID": "aa23b33b-4089-416e-a766-73b542111676",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "282a49fd-4884-417c-85aa-9003b98a8e50"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 167,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

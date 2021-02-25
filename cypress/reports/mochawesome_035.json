@@ -1,0 +1,454 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 12,
+    "passes": 12,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T19:34:44.850Z",
+    "end": "2021-02-04T19:34:50.894Z",
+    "duration": 6044,
+    "testsRegistered": 12,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b543c473-adc1-44c3-932b-2bf851968f6d",
+      "title": "",
+      "fullFile": "cypress/integration/favorite_recipes_spec.js",
+      "file": "cypress/integration/favorite_recipes_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c76562da-8f9b-476c-be00-f7ff2b69ceca",
+          "title": "Favorite recipes screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "718a199b-19b0-499b-9276-1ef6f7fa9392",
+              "title": "60 - Implemente os elementos da tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas) respeitando os atributos descritos no protótipo",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Todos os data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis",
+                  "fullTitle": "Favorite recipes screen 60 - Implemente os elementos da tela de receitas favoritas (cumulativo com os atributos em comum com a tela de receitas feitas) respeitando os atributos descritos no protótipo Todos os data-testids, cumulativo com os atributos em comum com a tela de receitas feitas, estão disponíveis",
+                  "timedOut": null,
+                  "duration": 787,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-all-btn\"]');\ncy.get('[data-testid=\"filter-by-food-btn\"]');\ncy.get('[data-testid=\"filter-by-drink-btn\"]');\ncy.get('[data-testid=\"0-horizontal-image\"]');\ncy.get('[data-testid=\"0-horizontal-top-text\"]');\ncy.get('[data-testid=\"0-horizontal-name\"]');\ncy.get('[data-testid=\"0-horizontal-share-btn\"]');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]');\ncy.get('[data-testid=\"1-horizontal-image\"]');\ncy.get('[data-testid=\"1-horizontal-top-text\"]');\ncy.get('[data-testid=\"1-horizontal-name\"]');\ncy.get('[data-testid=\"1-horizontal-share-btn\"]');\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]');",
+                  "err": {},
+                  "uuid": "710fe9da-99b6-446c-bcb5-213282f43a71",
+                  "parentUUID": "718a199b-19b0-499b-9276-1ef6f7fa9392",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "710fe9da-99b6-446c-bcb5-213282f43a71"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 787,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c61a0957-1748-436c-8bd9-94a6578c99de",
+              "title": "61 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de \"desfavoritar\"",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma comida",
+                  "fullTitle": "Favorite recipes screen 61 - Desenvolva a tela de maneira que, caso a receita do card seja uma comida, ela deve possuir: a foto da receita, o nome, a categoria, a area, um botão de compartilhar e um de \"desfavoritar\" O card possui os atributos corretos de uma comida",
+                  "timedOut": null,
+                  "duration": 307,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').should('have.attr', 'src').should('include', favoriteRecipes[0].image);\ncy.get('[data-testid=\"0-horizontal-top-text\"]').contains(\"\".concat(favoriteRecipes[0].area, \" - \").concat(favoriteRecipes[0].category));\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"0-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+                  "err": {},
+                  "uuid": "7b842fa6-2851-436c-b18b-78ab75146194",
+                  "parentUUID": "c61a0957-1748-436c-8bd9-94a6578c99de",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7b842fa6-2851-436c-b18b-78ab75146194"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 307,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "db45a88b-a4a3-4b0a-aa6a-c6bc0dfa5702",
+              "title": "62 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de \"desfavoritar\"",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "O card possui os atributos corretos de uma bebida",
+                  "fullTitle": "Favorite recipes screen 62 - Desenvolva a tela de maneira que, caso a receita do card seja uma bebida, ela deve possuir: a foto da receita, o nome, se é alcoólica ou não, um botão de compartilhar e um de \"desfavoritar\" O card possui os atributos corretos de uma bebida",
+                  "timedOut": null,
+                  "duration": 242,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-image\"]').should('have.attr', 'src').should('include', favoriteRecipes[1].image);\ncy.get('[data-testid=\"1-horizontal-top-text\"]').contains(favoriteRecipes[1].alcoholicOrNot);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-share-btn\"]').should('have.attr', 'src').should('include', 'shareIcon');\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').should('have.attr', 'src').should('include', 'blackHeartIcon');",
+                  "err": {},
+                  "uuid": "7afb6c43-992a-406d-832a-6f1a890b1d74",
+                  "parentUUID": "db45a88b-a4a3-4b0a-aa6a-c6bc0dfa5702",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7afb6c43-992a-406d-832a-6f1a890b1d74"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 242,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d9932e46-01ba-42a8-8b92-a4fce2251754",
+              "title": "63 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "fullTitle": "Favorite recipes screen 63 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard Ao clicar no botão de compartilhar deve aparecer a mensagem \"Link copiado!\"",
+                  "timedOut": null,
+                  "duration": 331,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.contains('Link copiado!');",
+                  "err": {},
+                  "uuid": "95907c0a-921c-4d5c-afa1-4189f8ceeb02",
+                  "parentUUID": "d9932e46-01ba-42a8-8b92-a4fce2251754",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "fullTitle": "Favorite recipes screen 63 - Desenvolva a solução de maneira que o botão de compartilhar deve copiar a URL da tela de detalhes da receita para o clipboard A URL da tela de detalhes da receita é copiada para o clipboard",
+                  "timedOut": null,
+                  "duration": 301,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-share-btn\"]').click();\ncy.window().then(function (win) {\n  cy.wrap(win.navigator.clipboard.readText()).should('eq', 'http://localhost:3000/comidas/52771');\n});",
+                  "err": {},
+                  "uuid": "ab2793fc-960c-4716-a936-9d44d7ae5aba",
+                  "parentUUID": "d9932e46-01ba-42a8-8b92-a4fce2251754",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "95907c0a-921c-4d5c-afa1-4189f8ceeb02",
+                "ab2793fc-960c-4716-a936-9d44d7ae5aba"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 632,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2587d74c-71de-4751-a45b-028f5bea8da8",
+              "title": "64 - Desenvolva a solução de maneira que o botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida da tela",
+                  "fullTitle": "Favorite recipes screen 64 - Desenvolva a solução de maneira que o botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida da tela",
+                  "timedOut": null,
+                  "duration": 377,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').should('not.exist');\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "669f6597-e429-40eb-9685-656ddf6029cb",
+                  "parentUUID": "2587d74c-71de-4751-a45b-028f5bea8da8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida do localStorage",
+                  "fullTitle": "Favorite recipes screen 64 - Desenvolva a solução de maneira que o botão de \"desfavoritar\" deve remover a receita da lista de receitas favoritas do `localStorage` e da tela Ao clicar no botão de \"desfavoritar\" a respectiva receita é removida do localStorage",
+                  "timedOut": null,
+                  "duration": 417,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq(favoriteRecipes);\n});\ncy.get('[data-testid=\"1-horizontal-favorite-btn\"]').click();\ncy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq([favoriteRecipes[0]]);\n});\ncy.get('[data-testid=\"0-horizontal-favorite-btn\"]').click();\ncy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('favoriteRecipes'))).to.deep.eq([]);\n});",
+                  "err": {},
+                  "uuid": "fdb93099-cfcd-4362-aeab-0dbcfda928fe",
+                  "parentUUID": "2587d74c-71de-4751-a45b-028f5bea8da8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "669f6597-e429-40eb-9685-656ddf6029cb",
+                "fdb93099-cfcd-4362-aeab-0dbcfda928fe"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 794,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "f42143d2-563a-454c-b043-7d93c38d0530",
+              "title": "65 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "fullTitle": "Favorite recipes screen 65 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Food\" as receitas devem ser filtradas por comidas",
+                  "timedOut": null,
+                  "duration": 331,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "c475747f-0f2e-44f7-8fd7-69561c0aeea8",
+                  "parentUUID": "f42143d2-563a-454c-b043-7d93c38d0530",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "fullTitle": "Favorite recipes screen 65 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"Drinks\" as receitas devem ser filtradas por bebidas",
+                  "timedOut": null,
+                  "duration": 272,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-drink-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[1].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').should('not.exist');",
+                  "err": {},
+                  "uuid": "23272c81-0e99-4932-8d3a-f3a181ba5729",
+                  "parentUUID": "f42143d2-563a-454c-b043-7d93c38d0530",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "fullTitle": "Favorite recipes screen 65 - Implemente 2 botões que filtram as receitas por comida ou bebida e um terceiro que remove todos os filtros Ao clicar no botão \"All\" o filtro deve ser removido",
+                  "timedOut": null,
+                  "duration": 363,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"filter-by-food-btn\"]').click();\ncy.get('[data-testid=\"filter-by-all-btn\"]').click();\ncy.get('[data-testid=\"0-horizontal-name\"]').contains(favoriteRecipes[0].name);\ncy.get('[data-testid=\"1-horizontal-name\"]').contains(favoriteRecipes[1].name);",
+                  "err": {},
+                  "uuid": "13928c65-4773-451f-a3ee-324d124fbbad",
+                  "parentUUID": "f42143d2-563a-454c-b043-7d93c38d0530",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "c475747f-0f2e-44f7-8fd7-69561c0aeea8",
+                "23272c81-0e99-4932-8d3a-f3a181ba5729",
+                "13928c65-4773-451f-a3ee-324d124fbbad"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 966,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a61e458e-b942-45e1-bcd0-a71cc2e9c53c",
+              "title": "66 - Redirecione a pessoa usuária ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Favorite recipes screen 66 - Redirecione a pessoa usuária ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita Ao clicar na foto da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 424,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"0-horizontal-image\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+                  "err": {},
+                  "uuid": "2568cccb-9d7e-4297-8829-73119cc4a12f",
+                  "parentUUID": "a61e458e-b942-45e1-bcd0-a71cc2e9c53c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "fullTitle": "Favorite recipes screen 66 - Redirecione a pessoa usuária ao clicar na foto ou no nome da receita, a rota deve mudar para a tela de detalhes daquela receita Ao clicar no nome da receita, a rota deve mudar para a tela de detalhes daquela receita",
+                  "timedOut": null,
+                  "duration": 301,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"1-horizontal-name\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+                  "err": {},
+                  "uuid": "e6ebfde0-58c5-44d0-8e39-eb58fcd8e859",
+                  "parentUUID": "a61e458e-b942-45e1-bcd0-a71cc2e9c53c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "2568cccb-9d7e-4297-8829-73119cc4a12f",
+                "e6ebfde0-58c5-44d0-8e39-eb58fcd8e859"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 725,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

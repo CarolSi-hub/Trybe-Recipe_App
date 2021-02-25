@@ -1,0 +1,378 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T19:30:15.359Z",
+    "end": "2021-02-04T19:30:24.864Z",
+    "duration": 9505,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7bd73f50-df31-48e4-bf63-29e9702925d2",
+      "title": "",
+      "fullFile": "cypress/integration/login_spec.js",
+      "file": "cypress/integration/login_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e07c5f15-b9a4-453f-aa51-d0525d0a99c2",
+          "title": "2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os data-testids email-input, password-input e login-submit-btn",
+              "fullTitle": "2 - Crie todos os elementos que devem respeitar os atributos descritos no protótipo para a tela de login Tem os data-testids email-input, password-input e login-submit-btn",
+              "timedOut": null,
+              "duration": 900,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"email-input\"]');\ncy.get('[data-testid=\"password-input\"]');\ncy.get('[data-testid=\"login-submit-btn\"]');",
+              "err": {},
+              "uuid": "7c4c25fa-c476-4189-b774-e1f82fdf9093",
+              "parentUUID": "e07c5f15-b9a4-453f-aa51-d0525d0a99c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7c4c25fa-c476-4189-b774-e1f82fdf9093"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 900,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "66fa4184-58cc-4d9f-a70c-3d1d4fbdfee5",
+          "title": "3 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever seu email no input de email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "É possível escrever o email",
+              "fullTitle": "3 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever seu email no input de email É possível escrever o email",
+              "timedOut": null,
+              "duration": 693,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"email-input\"]').should('have.value', 'email@mail.com');",
+              "err": {},
+              "uuid": "eb88234e-8cdf-4db1-bcee-405225064a7b",
+              "parentUUID": "66fa4184-58cc-4d9f-a70c-3d1d4fbdfee5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eb88234e-8cdf-4db1-bcee-405225064a7b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 693,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "c3e75cb8-23f9-4466-a25d-0381ce80294d",
+          "title": "4 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever sua senha no input de senha",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "É possível escrever a senha",
+              "fullTitle": "4 - Desenvolva a tela de maneira que a pessoa deve conseguir escrever sua senha no input de senha É possível escrever a senha",
+              "timedOut": null,
+              "duration": 540,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"password-input\"]').should('have.value', '1234567');",
+              "err": {},
+              "uuid": "e624c54e-3eb5-4872-a857-72aae3ef9c70",
+              "parentUUID": "c3e75cb8-23f9-4466-a25d-0381ce80294d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e624c54e-3eb5-4872-a857-72aae3ef9c70"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 540,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "aa17475b-48bf-43a7-941c-db217016e6bf",
+          "title": "5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O botão deve estar desativado se o email for inválido",
+              "fullTitle": "5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos O botão deve estar desativado se o email for inválido",
+              "timedOut": null,
+              "duration": 1105,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.get('[data-testid=\"email-input\"]').type('email@mail');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.get('[data-testid=\"email-input\"]').clear().type('email.com');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');",
+              "err": {},
+              "uuid": "de78df0b-dcc0-48df-8a19-676b0462d815",
+              "parentUUID": "aa17475b-48bf-43a7-941c-db217016e6bf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos",
+              "fullTitle": "5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos O botão deve estar desativado se a senha deve tiver 6 caracteres ou menos",
+              "timedOut": null,
+              "duration": 847,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"password-input\"]').type('123456');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');",
+              "err": {},
+              "uuid": "d8b382bf-638b-4222-a309-a23248bc2660",
+              "parentUUID": "aa17475b-48bf-43a7-941c-db217016e6bf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "O botão deve estar ativado se o email e a senha forem válidos",
+              "fullTitle": "5 - Desenvolva a tela de maneira que o formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos O botão deve estar ativado se o email e a senha forem válidos",
+              "timedOut": null,
+              "duration": 902,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/');\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"login-submit-btn\"]').should('not.be.disabled');",
+              "err": {},
+              "uuid": "16490464-3853-4f00-8e61-367483f23871",
+              "parentUUID": "aa17475b-48bf-43a7-941c-db217016e6bf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de78df0b-dcc0-48df-8a19-676b0462d815",
+            "d8b382bf-638b-4222-a309-a23248bc2660",
+            "16490464-3853-4f00-8e61-367483f23871"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2854,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0f8c6eaa-65a4-497a-8bf9-e13df26ce078",
+          "title": "6 - Salve 2 tokens no localStorage após a submissão, identificados pelas chaves mealsToken e cocktailsToken",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Após a submissão mealsToken e cocktailsToken devem estar salvos em localStorage",
+              "fullTitle": "6 - Salve 2 tokens no localStorage após a submissão, identificados pelas chaves mealsToken e cocktailsToken Após a submissão mealsToken e cocktailsToken devem estar salvos em localStorage",
+              "timedOut": null,
+              "duration": 1067,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.localStorage.clear();\n  }\n});\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.window().then(function (win) {\n  expect(win.localStorage.getItem('mealsToken')).to.be.null;\n  expect(win.localStorage.getItem('cocktailsToken')).to.be.null;\n});\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"login-submit-btn\"]').click();\ncy.window().then(function (win) {\n  expect(win.localStorage.getItem('mealsToken')).to.eq('1');\n  expect(win.localStorage.getItem('cocktailsToken')).to.eq('1');\n  win.localStorage.clear();\n});",
+              "err": {},
+              "uuid": "e38964ba-ab2d-43df-b173-f6789fb01e7b",
+              "parentUUID": "0f8c6eaa-65a4-497a-8bf9-e13df26ce078",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e38964ba-ab2d-43df-b173-f6789fb01e7b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1067,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e67a458b-08e2-4a1d-b74c-54c8c2139da3",
+          "title": "7 - Salve o e-mail da pessoa usuária no localStorage na chave user após a submissão",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Após a submissão a chave user deve estar salva em localStorage",
+              "fullTitle": "7 - Salve o e-mail da pessoa usuária no localStorage na chave user após a submissão Após a submissão a chave user deve estar salva em localStorage",
+              "timedOut": null,
+              "duration": 1020,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.localStorage.clear();\n  }\n});\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.window().then(function (win) {\n  expect(win.localStorage.getItem('user')).to.be.null;\n});\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"login-submit-btn\"]').click();\ncy.window().then(function (win) {\n  expect(JSON.parse(win.localStorage.getItem('user'))).to.deep.eq({\n    email: 'email@mail.com'\n  });\n  win.localStorage.clear();\n});",
+              "err": {},
+              "uuid": "81b7d8fc-0025-4adf-a7b1-a7c2e4b52b25",
+              "parentUUID": "e67a458b-08e2-4a1d-b74c-54c8c2139da3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81b7d8fc-0025-4adf-a7b1-a7c2e4b52b25"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1020,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "10aadb2b-a7a1-4146-8094-796f1db9c450",
+          "title": "8 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A rota muda para a tela principal de receitas de comidas",
+              "fullTitle": "8 - Redirecione a pessoa usuária para a tela principal de receitas de comidas após a submissão e validação com sucesso do login A rota muda para a tela principal de receitas de comidas",
+              "timedOut": null,
+              "duration": 949,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.localStorage.clear();\n  }\n});\ncy.get('[data-testid=\"login-submit-btn\"]').should('be.disabled');\ncy.window().then(function (win) {\n  expect(win.localStorage.getItem('user')).to.be.null;\n});\ncy.get('[data-testid=\"email-input\"]').type('email@mail.com');\ncy.get('[data-testid=\"password-input\"]').type('1234567');\ncy.get('[data-testid=\"login-submit-btn\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas');\n});\ncy.window().then(function (win) {\n  win.localStorage.clear();\n});",
+              "err": {},
+              "uuid": "5b3fdbae-b0f6-4caf-aa6a-31cc10c3348d",
+              "parentUUID": "10aadb2b-a7a1-4146-8094-796f1db9c450",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5b3fdbae-b0f6-4caf-aa6a-31cc10c3348d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 949,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T22:50:21.766Z",
+    "end": "2021-02-04T22:50:28.419Z",
+    "duration": 6653,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "62e884c6-01ee-48b2-b03d-5772c13b0b00",
+      "title": "",
+      "fullFile": "cypress/integration/explore_drinks_or_meals_spec.js",
+      "file": "cypress/integration/explore_drinks_or_meals_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce088ce1-070e-4102-9939-d0db7b80a601",
+          "title": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar comidas",
+              "fullTitle": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar comidas",
+              "timedOut": null,
+              "duration": 1084,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]');\ncy.get('[data-testid=\"explore-by-area\"]');\ncy.get('[data-testid=\"explore-surprise\"]');",
+              "err": {},
+              "uuid": "d5afcbd9-76eb-4d05-aa19-ed67ce57b56e",
+              "parentUUID": "ce088ce1-070e-4102-9939-d0db7b80a601",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar bebidas",
+              "fullTitle": "70 - Implemente os elementos da tela de explorar bebidas ou comidas respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar bebidas",
+              "timedOut": null,
+              "duration": 298,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]');\ncy.get('[data-testid=\"explore-by-area\"]').should('not.exist');\ncy.get('[data-testid=\"explore-surprise\"]');",
+              "err": {},
+              "uuid": "b48933c3-63fa-4ae7-9ad2-320866bd964c",
+              "parentUUID": "ce088ce1-070e-4102-9939-d0db7b80a601",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5afcbd9-76eb-4d05-aa19-ed67ce57b56e",
+            "b48933c3-63fa-4ae7-9ad2-320866bd964c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1382,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f411ea40-d7b0-4175-b709-f86e45d7d8cf",
+          "title": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os botões \"Por Ingredientes\", \"Por Local de Origem\" e \"Me Surpreenda!\" para a tela de explorar comidas",
+              "fullTitle": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória Tem os botões \"Por Ingredientes\", \"Por Local de Origem\" e \"Me Surpreenda!\" para a tela de explorar comidas",
+              "timedOut": null,
+              "duration": 365,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').contains('Por Ingredientes');\ncy.get('[data-testid=\"explore-by-area\"]').contains('Por Local de Origem');\ncy.get('[data-testid=\"explore-surprise\"]').contains('Me Surpreenda!');",
+              "err": {},
+              "uuid": "81780ab6-d7ee-4fc4-88da-9f6770fda233",
+              "parentUUID": "f411ea40-d7b0-4175-b709-f86e45d7d8cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem apenas os botões \"Por Ingredientes\" e \"Me Surpreenda!\" para a tela de explorar bebidas",
+              "fullTitle": "71 - Desenvolva 3 botões: um para explorar por ingrediente, um para explorar por local de origem e um para pegar uma receita aleatória Tem apenas os botões \"Por Ingredientes\" e \"Me Surpreenda!\" para a tela de explorar bebidas",
+              "timedOut": null,
+              "duration": 301,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').contains('Por Ingredientes');\ncy.get('[data-testid=\"explore-by-area\"]').should('not.exist');\ncy.get('[data-testid=\"explore-surprise\"]').contains('Me Surpreenda!');",
+              "err": {},
+              "uuid": "872cb84b-aa92-450f-b8f5-10f9e283c239",
+              "parentUUID": "f411ea40-d7b0-4175-b709-f86e45d7d8cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81780ab6-d7ee-4fc4-88da-9f6770fda233",
+            "872cb84b-aa92-450f-b8f5-10f9e283c239"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 666,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "294266cc-3d91-4479-bebc-b758132c58f8",
+          "title": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente",
+              "fullTitle": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de explorar comidas por ingrediente",
+              "timedOut": null,
+              "duration": 460,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/comidas/ingredientes');\n});",
+              "err": {},
+              "uuid": "93110baf-f6c1-4718-993b-930be75e3424",
+              "parentUUID": "294266cc-3d91-4479-bebc-b758132c58f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente",
+              "fullTitle": "72 - Redirecione a pessoa usuária ao clicar em \"Por Ingredientes\", a rota deve mudar para a tela de explorar por ingredientes Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de explorar bebidas por ingrediente",
+              "timedOut": null,
+              "duration": 385,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas');\ncy.get('[data-testid=\"explore-by-ingredient\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/bebidas/ingredientes');\n});",
+              "err": {},
+              "uuid": "768fb972-a081-47e5-a1b3-003d832b43e5",
+              "parentUUID": "294266cc-3d91-4479-bebc-b758132c58f8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "93110baf-f6c1-4718-993b-930be75e3424",
+            "768fb972-a081-47e5-a1b3-003d832b43e5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "62fd7b44-01d8-4080-92cd-b9f61bc0de42",
+          "title": "73 - Redirecione a pessoa usuária ao clicar em \"Por Local de Origem\", a rota deve mudar para tela de explorar por local de origem",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "A rota deve mudar para tela de explorar por local de origem",
+              "fullTitle": "73 - Redirecione a pessoa usuária ao clicar em \"Por Local de Origem\", a rota deve mudar para tela de explorar por local de origem A rota deve mudar para tela de explorar por local de origem",
+              "timedOut": null,
+              "duration": 318,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas');\ncy.get('[data-testid=\"explore-by-area\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/comidas/area');\n});",
+              "err": {},
+              "uuid": "d304c37e-3d56-4f7e-9e25-cefa1f5068dc",
+              "parentUUID": "62fd7b44-01d8-4080-92cd-b9f61bc0de42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d304c37e-3d56-4f7e-9e25-cefa1f5068dc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 318,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d9d8c332-e345-4e92-9db7-a29e97a50389",
+          "title": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória",
+              "fullTitle": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API Ao clicar no botão \"Por Ingredientes\" da tela de explorar comidas a rota muda para a página de detalhes de uma comida aleatória",
+              "timedOut": null,
+              "duration": 788,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-surprise\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/comidas/52771');\n});",
+              "err": {},
+              "uuid": "3508875b-aa72-4123-978e-040145c037a2",
+              "parentUUID": "d9d8c332-e345-4e92-9db7-a29e97a50389",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória",
+              "fullTitle": "74 - Redirecione a pessoa usuária ao clicar em \"Me Surpreenda!\", a rota deve mudar para a tela de detalhes de uma receita, que deve ser escolhida de forma aleatória através da API Ao clicar no botão \"Explorar Bebidas\" da tela de explorar bebidas a rota muda para a página de detalhes de uma bebida aleatória",
+              "timedOut": null,
+              "duration": 553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"explore-surprise\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/bebidas/178319');\n});",
+              "err": {},
+              "uuid": "d5d1f8c7-d983-4bc0-97d7-05274d1130f8",
+              "parentUUID": "d9d8c332-e345-4e92-9db7-a29e97a50389",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3508875b-aa72-4123-978e-040145c037a2",
+            "d5d1f8c7-d983-4bc0-97d7-05274d1130f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

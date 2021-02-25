@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-04T20:10:09.694Z",
+    "end": "2021-02-04T20:10:19.825Z",
+    "duration": 10131,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "69302dfd-a5d2-4a47-944b-c5d7affa6f3a",
+      "title": "",
+      "fullFile": "cypress/integration/explore_by_ingredient_spec.js",
+      "file": "cypress/integration/explore_by_ingredient_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2714150c-c9e4-4a42-bbef-beb59a854e6f",
+          "title": "75 - Implemente os elementos da tela de explorar ingredientes respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar comidas por ingredientes",
+              "fullTitle": "75 - Implemente os elementos da tela de explorar ingredientes respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar comidas por ingredientes",
+              "timedOut": null,
+              "duration": 3232,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/ingredientes');\nfor (var index = 0; index < 12; index += 1) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-ingredient-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\"));\n}\ncy.get('[data-testid=\"12-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "503bfaf7-394d-4163-8779-b4eb01dbc4f9",
+              "parentUUID": "2714150c-c9e4-4a42-bbef-beb59a854e6f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem os data-testids corretos para a tela de explorar bebidas por ingredientes",
+              "fullTitle": "75 - Implemente os elementos da tela de explorar ingredientes respeitando os atributos descritos no protótipo Tem os data-testids corretos para a tela de explorar bebidas por ingredientes",
+              "timedOut": null,
+              "duration": 1151,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas/ingredientes');\nfor (var index = 0; index < 12; index += 1) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-ingredient-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\"));\n}\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "3269715a-120b-4825-b438-06c1f885b4b3",
+              "parentUUID": "2714150c-c9e4-4a42-bbef-beb59a854e6f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "503bfaf7-394d-4163-8779-b4eb01dbc4f9",
+            "3269715a-120b-4825-b438-06c1f885b4b3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6b93eb98-0ad4-4b9a-8920-26af64b7b8a7",
+          "title": "76 - Desenvolva cards para os 12 primeiros ingredientes, de forma que cada card contenha o nome do ingrediente e uma foto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes",
+              "fullTitle": "76 - Desenvolva cards para os 12 primeiros ingredientes, de forma que cada card contenha o nome do ingrediente e uma foto Tem o nome e a foto corretos para a tela de explorar comidas por ingredientes",
+              "timedOut": null,
+              "duration": 798,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/ingredientes', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\nmealIngredientsMock.meals.slice(0, 12).forEach(function (_ref, index) {\n  var ingredient = _ref.strIngredient;\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\")).should('have.attr', 'src').should('include', \"https://www.themealdb.com/images/ingredients/\".concat(ingredient, \"-Small.png\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\")).contains(ingredient);\n});\ncy.get('[data-testid=\"12-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "159c0816-ff1b-46f7-a648-8c03dfeb4413",
+              "parentUUID": "6b93eb98-0ad4-4b9a-8920-26af64b7b8a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes",
+              "fullTitle": "76 - Desenvolva cards para os 12 primeiros ingredientes, de forma que cada card contenha o nome do ingrediente e uma foto Tem o nome e a foto corretos para a tela de explorar bebidas por ingredientes",
+              "timedOut": null,
+              "duration": 663,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas/ingredientes', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ndrinkIngredientsMock.drinks.slice(0, 12).forEach(function (_ref2, index) {\n  var ingredient = _ref2.strIngredient1;\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\")).should('have.attr', 'src').should('include', \"https://www.thecocktaildb.com/images/ingredients/\".concat(ingredient, \"-Small.png\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\")).contains(ingredient);\n});\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "380449b8-7594-4a51-90d1-a680958087be",
+              "parentUUID": "6b93eb98-0ad4-4b9a-8920-26af64b7b8a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "159c0816-ff1b-46f7-a648-8c03dfeb4413",
+            "380449b8-7594-4a51-90d1-a680958087be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1461,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "360390f5-25c8-4773-a3ac-3af5e1dcf3d1",
+          "title": "77 -  Redireciona a pessoa usuária ao clicar no card do ingrediente, a rota deve mudar para tela principal de receitas mas mostrando apenas as receitas que contém o ingrediente escolhido",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Ao clicar no card do ingrediente da tela de explorar comidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente",
+              "fullTitle": "77 -  Redireciona a pessoa usuária ao clicar no card do ingrediente, a rota deve mudar para tela principal de receitas mas mostrando apenas as receitas que contém o ingrediente escolhido Ao clicar no card do ingrediente da tela de explorar comidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente",
+              "timedOut": null,
+              "duration": 767,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/comidas/ingredientes', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-ingredient-card\"]').click();\nmealsByIngredientMock.meals.slice(0, 12).forEach(function (meal, index) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-recipe-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\")).should('have.attr', 'src').should('include', meal['strMealThumb']);\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\")).contains(meal['strMeal']);\n});\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "a558285b-c598-4c4b-9e34-ad2ba40d83d2",
+              "parentUUID": "360390f5-25c8-4773-a3ac-3af5e1dcf3d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ao clicar no card do ingrediente da tela de explorar bebidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente",
+              "fullTitle": "77 -  Redireciona a pessoa usuária ao clicar no card do ingrediente, a rota deve mudar para tela principal de receitas mas mostrando apenas as receitas que contém o ingrediente escolhido Ao clicar no card do ingrediente da tela de explorar bebidas por ingrediente a rota muda para a tela principal de receitas filtrada pelo ingrediente",
+              "timedOut": null,
+              "duration": 930,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar/bebidas/ingredientes', {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get('[data-testid=\"0-ingredient-card\"]').click();\ndrinksByIngredientMock.drinks.slice(0, 12).forEach(function (drink, index) {\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-recipe-card\\\"]\"));\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-img\\\"]\")).should('have.attr', 'src').should('include', drink['strDrinkThumb']);\n  cy.get(\"[data-testid=\\\"\".concat(index, \"-card-name\\\"]\")).contains(drink['strDrink']);\n});\ncy.get('[data-testid=\"12-recipe-card\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-img\"]').should('not.exist');\ncy.get('[data-testid=\"12-card-name\"]').should('not.exist');",
+              "err": {},
+              "uuid": "d9947651-b64a-470e-9fa0-5b2d09b0ad00",
+              "parentUUID": "360390f5-25c8-4773-a3ac-3af5e1dcf3d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a558285b-c598-4c4b-9e34-ad2ba40d83d2",
+            "d9947651-b64a-470e-9fa0-5b2d09b0ad00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1697,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

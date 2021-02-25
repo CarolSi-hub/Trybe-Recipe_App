@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-05T00:58:37.626Z",
+    "end": "2021-02-05T00:58:40.361Z",
+    "duration": 2735,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c6ae2a98-21cb-4245-a7b5-2499fb5fe36c",
+      "title": "",
+      "fullFile": "cypress/integration/explore_spec.js",
+      "file": "cypress/integration/explore_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a231f905-1e62-4147-82ad-1d418405d6e1",
+          "title": "67 - Implemente os elementos da tela de explorar respeitando os atributos descritos no protótipo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tem os data-testids explore-food e explore-drinks",
+              "fullTitle": "67 - Implemente os elementos da tela de explorar respeitando os atributos descritos no protótipo Tem os data-testids explore-food e explore-drinks",
+              "timedOut": null,
+              "duration": 878,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar');\ncy.get('[data-testid=\"explore-food\"]');\ncy.get('[data-testid=\"explore-drinks\"]');",
+              "err": {},
+              "uuid": "be5177fc-5c8d-46da-9029-e3754434b7f3",
+              "parentUUID": "a231f905-1e62-4147-82ad-1d418405d6e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "be5177fc-5c8d-46da-9029-e3754434b7f3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 878,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "34424a56-efe0-4745-978b-1bb42b111c51",
+          "title": "68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "O nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "fullTitle": "68 - Desenvolva a tela de maneira que tenha 2 botões: um para explorar comidas e o outro para explorar bebidas O nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "timedOut": null,
+              "duration": 180,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar');\ncy.get('[data-testid=\"explore-food\"]').contains('Explorar Comidas');\ncy.get('[data-testid=\"explore-drinks\"]').contains('Explorar Bebidas');",
+              "err": {},
+              "uuid": "29a294a0-6f33-4bbf-8539-f0883bb86cb1",
+              "parentUUID": "34424a56-efe0-4745-978b-1bb42b111c51",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29a294a0-6f33-4bbf-8539-f0883bb86cb1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e1ef5acb-92c5-4a63-a3cf-847e7859b180",
+          "title": "69 - Redirecione a pessoa usuária ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Os nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "fullTitle": "69 - Redirecione a pessoa usuária ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas Os nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "timedOut": null,
+              "duration": 199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar');\ncy.get('[data-testid=\"explore-food\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/comidas');\n});",
+              "err": {},
+              "uuid": "beff6822-2bb3-4f53-b5a4-bb235b988f36",
+              "parentUUID": "e1ef5acb-92c5-4a63-a3cf-847e7859b180",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Os nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "fullTitle": "69 - Redirecione a pessoa usuária ao clicar em um dos botões, a rota deve mudar para a página de explorar comidas ou de explorar bebidas Os nomes dos botões devem ser \"Explorar Comidas\" e \"Explorar Bebidas\"",
+              "timedOut": null,
+              "duration": 287,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/explorar');\ncy.get('[data-testid=\"explore-drinks\"]').click();\ncy.location().should(function (loc) {\n  return expect(loc.pathname).to.eq('/explorar/bebidas');\n});",
+              "err": {},
+              "uuid": "e1349147-02b4-4e88-8745-2963032065ff",
+              "parentUUID": "e1ef5acb-92c5-4a63-a3cf-847e7859b180",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "beff6822-2bb3-4f53-b5a4-bb235b988f36",
+            "e1349147-02b4-4e88-8745-2963032065ff"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.2.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
