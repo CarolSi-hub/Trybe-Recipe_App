@@ -2,7 +2,7 @@
 
 ## https://trybe-recipe-app.vercel.app/
 
-<img src="./recipe-images/mobile-main.png" width=280px /><><img src="./recipe-images/main-comidas.png" width=280px /><><img src="./recipe-images/recipe-main.png" width=280px />
+<img src="./recipe-images/mobile-main.png" width=250px /><><img src="./recipe-images/main-comidas.png" width=250px /><><img src="./recipe-images/recipe-main.png" width=250px />
 
 # Sumário
 
